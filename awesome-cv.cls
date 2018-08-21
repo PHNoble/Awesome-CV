@@ -577,6 +577,19 @@
   \end{tabular*}%
 }
 
+% Define an entry of cv information
+% Usage: \cvextra{<title>}{<date>}{<description>}
+\newcommand*{\cvextra}[3]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    
+	  {\entrytitlestyle{#1} & \entrydatestyle{#2} \\}
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
+  \end{tabular*}%
+}
+
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
   \begin{center}
